@@ -1,0 +1,122 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #256525;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+}
+
+body {
+    background-color: #d7d7d7;
+}
+
+.index-content {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.todo-list {
+    width: 100%;
+    padding: 0;
+    list-style-type: none;
+}
+
+.todo-list li {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: #fff;
+    margin: 5px auto;
+    padding: 10px;
+    width: 80%;
+}
+
+.todo-list li div {
+    width: 20%;
+    text-align: center;
+}
+
+.todo-list li div a {
+    padding: 3px;
+    border-radius: 2px;
+    text-decoration: none;
+}
+
+.todo-list li div .update {
+    background-color: green;
+    color: #fff;
+}
+
+.todo-list li div .update:hover {
+    color: #62fd62;
+}
+
+.todo-list li div .delete {
+    background-color: red;
+    color: #fff;
+}
+
+.todo-list li div .delete:hover {
+    color: rgb(90, 22, 22);
+}
+
+/* FORMS */
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 60px);
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+}
+
+form div #id_title, form div #id_date {
+    outline: none;
+    width: 100%;
+    margin: 5px 0;
+}
+
+.submit-button, .create-button, .delete-button {
+    padding: 8px 20px;
+    align-self: center;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submit-button, .create-button {
+    background-color: #62fd62;
+}
+
+.delete-button {
+    background-color: red;
+}
+
+.submit-button:hover, .create-button:hover {
+    background-color: #256525;
+    color: #fff;
+}
+
+.delete-button:hover {
+    background-color: rgb(70, 0, 0);
+    color: #fff;
+}
+

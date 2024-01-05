@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'TO_DO/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1><a href="{%url 'TO_DO:index' %}">TO-DO</a></h1>
+    </header>
+    <a href="{% url 'TO_DO:create' %}">New to-do</a>
+    <main class="index-content">
+        {% if to_do_list  %}
+            <ul class="todo-list">
+                {% for to_do in to_do_list %}
+                    <li>
+                        <div>{{ to_do.title }}</div>
+                        <div><a class="update" href="{% url 'TO_DO:update' to_do.id %}">UPDATE</a></div>
+                        <div><a class="delete" href="{% url 'TO_DO:Todo_delete' to_do.id %}">DELETE</a></div>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>Nothing to do.</p>
+        {% endif %}
+    </main>
+</body>
+</html>
