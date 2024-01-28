@@ -11,7 +11,7 @@
     <header>
         <h1><a href="{% url 'TO_DO:index' %}">TO-DO</a></h1>
     </header>
-    <form method="post" action="{% url 'TO_DO:create' %}"> {% csrf_token %}
+    <form class="create-form" method="post" action="{% url 'TO_DO:create' %}"> {% csrf_token %}
         <div>
             {{ form.as_p }}
             <input class="create-button" type="submit" value="CREATE">

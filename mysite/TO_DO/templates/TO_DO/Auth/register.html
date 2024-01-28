@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'TO_DO/style.css' %}">
 </head>
 <body>
-    <form action="" method="post"> {% csrf_token %}
+    <form class="register-form" method="post"> {% csrf_token %}
         {{ registerform.as_p }}
-        <input type="submit" value="Register">
+        <input class="register-button" type="submit" value="Register">
     </form>
 </body>
 </html>
