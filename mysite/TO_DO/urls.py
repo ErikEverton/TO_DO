@@ -9,3 +9,8 @@ urlpatterns = [
     path("<int:pk>/update/", views.UpdateView.as_view(), name="update"),
     path("<int:pk>/delete/", views.DeleteTodoView.as_view(), name="Todo_delete"),
 ]
+
+urlpatterns += [
+    path('register/', views.registerUser, name='register'),
+    path('login/', views.loginUser, name='login'),
+]
