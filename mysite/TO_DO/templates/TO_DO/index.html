@@ -9,9 +9,18 @@
 </head>
 <body>
     <header>
-        <h1><a href="{%url 'TO_DO:index' %}">TO-DO</a></h1>
+        <div>
+            <h1><a href="{%url 'TO_DO:index' %}">TO-DO</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'TO_DO:create' %}">Create</a></li>
+                    <li><a href="{% url 'TO_DO:register' %}">Register</a></li>
+                    <li><a href="{% url 'TO_DO:login' %}">Login</a></li>
+                    <li><a href="{% url 'TO_DO:logout' %}">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <a href="{% url 'TO_DO:create' %}">New to-do</a>
     <main class="index-content">
         {% if to_do_list  %}
             <ul class="todo-list">

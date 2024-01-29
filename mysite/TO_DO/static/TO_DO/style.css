@@ -8,14 +8,26 @@
 header {
     background-color: #256525;
     height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-header a {
+header div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1024px;
+    height: 100%;
+    margin: auto;
+}
+
+header div a {
     color: #fff;
     text-decoration: none;
+}
+
+header div nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
 }
 
 body {
@@ -76,7 +88,7 @@ body {
 }
 
 /* FORMS TO-DO */
-.create-form {
+.create-form, .update-form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -84,18 +96,18 @@ body {
     height: calc(100vh - 60px);
 }
 
-.create-form div {
+.create-form div, .update-form div {
     display: flex;
     flex-direction: column;
 }
 
-.create-form div #id_title, .create-form div #id_date {
+.create-form div #id_title, .create-form div #id_date, .update-form div #id_title, .update-form div #id_date {
     outline: none;
     width: 100%;
     margin: 5px 0;
 }
 
-.submit-button, .create-button, .delete-button, .register-button {
+.submit-button, .create-button, .delete-button, .register-button, .login-button {
     padding: 8px 20px;
     align-self: center;
     border: none;
@@ -103,7 +115,7 @@ body {
     cursor: pointer;
 }
 
-.submit-button, .create-button, .register-button {
+.submit-button, .create-button, .register-button, .login-button {
     background-color: #62fd62;
 }
 
@@ -111,7 +123,7 @@ body {
     background-color: red;
 }
 
-.submit-button:hover, .create-button:hover, .register-button:hover {
+.submit-button:hover, .create-button:hover, .register-button:hover, .login-button:hover {
     background-color: #256525;
     color: #fff;
 }
@@ -123,30 +135,32 @@ body {
 
 /* AUTHENTICATION FORMS */
 
-.register-form {
+.register-form, .login-form {
     width: 80%;
     margin: auto;
     display: flex;
     flex-direction: column;
 }
 
-.register-form p {
+.register-form p, .login-form p {
     display: flex;
     flex-direction: column;
 }
 
-.register-form p label {
+.register-form p label, .login-form p label {
     margin: 20px 0;
     font-size: 20px;
 }
 
-.register-form p input {
+.register-form p input, .login-form p input {
     height: 30px;
     padding: 5px;
     font-size: 20px;
     outline: none;
 }
 
-.register-button {
-    
+.login-button {
+    margin: 10px 0 0 0;
 }
+
+

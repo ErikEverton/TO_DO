@@ -9,9 +9,19 @@
 </head>
 <body>
     <header>
-        <h1><a href="{% url 'TO_DO:index' %}">TO-DO</a></h1>
+        <div>
+            <h1><a href="{%url 'TO_DO:index' %}">TO-DO</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'TO_DO:create' %}">Create</a></li>
+                    <li><a href="{% url 'TO_DO:register' %}">Register</a></li>
+                    <li><a href="{% url 'TO_DO:login' %}">Login</a></li>
+                    <li><a href="{% url 'TO_DO:logout' %}">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <form method="post"> {% csrf_token %}
+    <form class="update-form" method="post"> {% csrf_token %}
         <div>
             {{ form.as_p }}
             <input class="submit-button" type="submit" value="UPDATE">
